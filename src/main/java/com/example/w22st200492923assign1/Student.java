@@ -1,5 +1,7 @@
 package com.example.w22st200492923assign1;
 
+import static java.sql.Types.NULL;
+
 public class Student {
 
     private String firstName;
@@ -35,6 +37,17 @@ public class Student {
 
     public void setStudentNumber(int studentNumber) {
         this.studentNumber = studentNumber;
+    }
+
+    public boolean dataValidator()
+    {
+        if(this.firstName.isEmpty() || this.lastName.isEmpty() || this.studentNumber == NULL  )
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
 }
